@@ -1,33 +1,20 @@
-# Personal Expense Tracker - Problem Statement
+# Personal Expense Tracker - Problem Statement (Basic)
 
-## 1. Problem Context
-Financial fragmentation affects three primary user groups who struggle to maintain a clear picture of their financial health:
+## 1. Introduction
+Many individuals, especially university students and young professionals, struggle to manage their personal finances. Without a clear record of daily spending, it is easy to overspend and difficult to save for future needs.
 
-| Segment | Typical Context | Core Frictions |
-| :--- | :--- | :--- |
-| **Students** | Pocket money, part-time earnings, mess/rent bills | Impulse spending, no savings tracking |
-| **Young Professionals** | Salary, EMIs, investments, daily commute | Lifestyle inflation, "hidden" small expenses |
-| **Small Business Owners** | Petty cash, supplies, transportation, service fees | Mixing personal and business cash, manual tracking |
+## 2. Current Problems
+*   **Poor Tracking:** Most people rely on memory to track their expenses, which often leads to forgetting small but frequent costs.
+*   **Lack of Insights:** It is hard to see a clear breakdown of spending categories (e.g., how much is spent on food vs. transport) without a visual tool.
+*   **Manual Stress:** Keeping track of bills and receipts manually is time-consuming and prone to errors.
+*   **Overspending:** Without a real-time view of their balance, people often spend more than they can afford.
 
-## 2. Current State (As-Is)
-*   Expenses are often tracked mentally or through inconsistent notes and chat notifications.
-*   Transactions are buried in bank SMS or app alerts without centralized categorization.
-*   Monthly budgeting is reactive (noticing a low balance) rather than proactive (setting limits).
-*   Visual breakdowns of spending trends are absent, leading to uninformed financial decisions.
+## 3. The Proposed Solution
+The **Personal Expense Tracker** is designed to solve these problems by providing:
+*   **Easy Logging:** A fast way to enter transactions as they happen.
+*   **Instant Totals:** Automatic calculation of total income, expenses, and remaining balance.
+*   **Visual Charts:** Clear graphs to help users understand their spending habits at a glance.
+*   **Safe Storage:** A digital database to keep all financial records in one place securely.
 
-## 3. Future State (To-Be)
-*   A unified logging system with clear metadata (amount, category, date, payment method).
-*   Real-time dashboard for immediate balance visibility and trend analysis.
-*   Automated categorization and budget monitoring to prevent overspending.
-*   A secure, private repository for financial history with easy data retrieval.
-
-## 4. Business Impact
-| Impact Area | Current Cost | Expected Benefit |
-| :--- | :--- | :--- |
-| **Savings Growth** | Missed opportunities to invest or save | Identification of leakages to boost net savings |
-| **Budget Discipline** | Recurring overspending in non-essential categories | Proactive alerts and category-wise control |
-| **Planning Accuracy** | Uncertainty in future financial commitments | Data-driven monthly and yearly planning |
-| **Financial Wellness** | Stress due to unexpected "empty wallet" moments | Improved confidence through consistent monitoring |
-
-## 5. Problem Statement
-Individuals across academic and professional sectors lack a centralized, intuitive, and secure platform to monitor their daily financial transactions. This lack of visibility leads to inconsistent savings, lifestyle inflation, and poor financial discipline. The **Personal Expense Tracker** addresses this by providing a structured transaction management system with real-time visual insights and budget tracking, consolidated into one secure web platform.
+## 4. Problem Statement Summary
+The lack of a simple, digital tool for tracking daily finances leads to poor money management and overspending. This project aims to build a user-friendly web application that helps individuals take control of their finances through easy transaction logging and visual spending analysis.
