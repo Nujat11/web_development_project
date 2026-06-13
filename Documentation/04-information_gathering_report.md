@@ -4,7 +4,6 @@
 This report explains how I gathered information to decide what features this app needs. I wanted to keep it simple so that students and individuals can use it without any confusion.
 
 ## 2. Methodology
-*   **Short Interviews:** I talked to a few classmates about their daily spending and what they find difficult about saving money.
 *   **Self-Observation:** I tracked my own daily expenses for one week to see which categories (like Food, Transport, and Bills) are used most often.
 
 ## 3. Findings
