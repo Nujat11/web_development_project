@@ -1,25 +1,22 @@
-# Personal Expense Tracker - Stakeholder Analysis
+# Personal Expense Tracker - Stakeholder Analysis (Basic)
 
-## 1. Stakeholder Categories
-
-### Primary Stakeholders
-| Stakeholder | Role | Key Expectation |
+## 1. Primary Stakeholders
+| Stakeholder | Role | Expectation |
 | :--- | :--- | :--- |
-| **End Users** | Daily financial logging | Privacy, simple UI, and accurate balance reporting |
-| **Project Owner** | Feature prioritization | Timely delivery of a functional and secure MVP |
+| **End Users** | Use the app daily | A simple app that tracks money correctly. |
+| **Student Developer** | Build the project | To create a functional React and FastAPI app. |
 
-### Secondary Stakeholders
-| Stakeholder | Role | Key Expectation |
+## 2. Secondary Stakeholders
+| Stakeholder | Role | Expectation |
 | :--- | :--- | :--- |
-| **Academic Instructor** | Project Evaluator | Clear documentation and adherence to best practices |
-| **Peer Reviewers** | Quality check | Readable code and standardized API folder structure |
+| **Instructor (Teacher)** | Evaluate the project | Clear documentation and working features. |
+| **Classmates** | Beta Testing | Providing feedback on the design and usability. |
 
-### Internal Stakeholders
-*   **Full Stack Developer:** Handles development for both React (Frontend) and FastAPI (Backend).
-*   **UI Designer:** Responsible for making the dashboard intuitive and accessible.
-*   **QA Tester:** Ensures calculations and data persistence work correctly.
+## 3. Internal Roles
+*   **Frontend Developer:** Working on the React UI and charts.
+*   **Backend Developer:** Building the FastAPI endpoints and database.
+*   **Tester:** Checking for bugs and calculation errors.
 
-### External Stakeholders
-*   **Database Provider (PostgreSQL):** Reliability and data persistency.
-*   **GitHub:** Source control and project management hosting.
-
+## 4. External Support
+*   **GitHub:** For saving code and version control.
+*   **Database (PostgreSQL):** For storing all the user's financial records.
