@@ -1,10 +1,24 @@
-# Personal Expense Tracker - Interview Questions
+# Personal Expense Tracker - Interview Framework
 
-**Introduction:** "I am designing a simple tool to help students and young professionals track their daily expenses more easily. I'd like to ask you a few quick questions."
+## 1. Interview Goals
+- Identify friction points in manual expense logging.
+- Understand user motivation for financial discipline.
+- Validate the need for visual charts and balance tracking.
 
-1. **The Problem:** Can you tell me about the last time you tried to track your spending? What made it difficult for you?
-2. **Small Expenses:** How do you handle small, frequent costs like rickshaw fares or snacks? Do you think they are worth tracking?
-3. **Speed:** If you were using an app, how many seconds would you be willing to spend to log a single expense?
-4. **Visibility:** When you open a finance app, what is the very first piece of information you want to see? (e.g., How much you spent today? Your total balance?)
-5. **Simplicity:** Have you used other finance apps before? If so, what did you dislike about them? 
-6. **Motivation:** What kind of summary or visualization would actually help you spend less money next month?
+## 2. Target Personas
+- **Persona 1:** University Student (Small frequent spends).
+- **Persona 2:** Young Professional (Monthly bills and salary).
+- **Persona 3:** Freelancer (Variable income and project costs).
+
+## 3. Structured Interview Questions
+| Question # | Interview Question | Objective | Mapped Requirement |
+|---|---|---|---|
+| Q1 | How do you currently track your daily spending? | Discover current behavior | FR-01, FR-05 |
+| Q2 | What prevents you from recording every small purchase (e.g., snacks)? | Identify pain points | FR-02, NFR-01 |
+| Q3 | How many seconds would you realistically spend to log one item? | Define performance needs | NFR-01 (Speed) |
+| Q4 | When opening a tracker, what is the first number you want to see? | Identify priority features | FR-10 (Balance) |
+| Q5 | Have you used other apps? What made you stop using them? | Competitive analysis | FR-02 (Simplicity) |
+| Q6 | What kind of chart would help you understand your habits better? | Design visualization | FR-08 (Charts) |
+
+## 4. Closing Note
+Thank the interviewee and ask if they would be willing to test the initial prototype once it is ready.
