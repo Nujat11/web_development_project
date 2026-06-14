@@ -3,18 +3,25 @@
 ## 1. Project Background
 The **Personal Expense Tracker** is a basic web app designed to help students and individuals track their daily spending easily. It focuses on speed and simplicity to ensure users don't forget to log small costs.
 
-## 2. Objectives
-- Allow users to log expenses in under 5 seconds.
-- Provide a clear view of the current account balance.
-- Use simple charts to show spending by category.
+## 2. Project Goals & Objectives
+| Goal | Description |
+|---|---|
+| **Speed** | Allow users to log expenses in under 5 seconds. |
+| **Visibility** | Provide a clear view of the current account balance. |
+| **Analysis** | Use simple charts to show spending by category. |
 
-## 3. Basic Features
-- **User Login:** Private accounts for each user.
-- **Add Expense:** Quick form to enter amount and category.
-- **Dashboard:** Shows Total Balance and a Pie Chart.
-- **History:** List of all past transactions.
+## 3. Core Features
+| Feature | Details |
+|---|---|
+| **User Login** | Private accounts for each user to secure their data. |
+| **Add Transaction** | Quick form with Amount and Category selection. |
+| **Dashboard** | Shows Total Balance and a Pie Chart summary. |
+| **Recent History** | A simple list of all past transactions. |
 
 ## 4. Technology Stack
-- **Frontend:** React (Simple UI).
-- **Backend:** FastAPI (Fast processing).
-- **Database:** PostgreSQL (Safe storage).
+| Layer | Technology | Reason |
+|---|---|---|
+| **Frontend** | React | Flexible and fast user interface. |
+| **Backend** | FastAPI | High performance for data handling. |
+| **Database** | PostgreSQL | Safe and reliable data storage. |
+
