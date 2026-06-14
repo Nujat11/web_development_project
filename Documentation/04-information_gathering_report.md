@@ -4,6 +4,8 @@
 This report explains how I gathered information to decide what features this app needs. I wanted to keep it simple so that students and individuals can use it without any confusion.
 
 ## 2. Methodology
+*   **Online Survey:** A Google Form was distributed to 10 university students and young professionals to understand their financial tracking habits.
+*   **Short Interviews:** I conducted 5-minute interviews with 5 classmates to dive deeper into their specific pain points.
 *   **Self-Observation:** I tracked my own daily expenses for one week to see which categories (like Food, Transport, and Bills) are used most often.
 
 ## 3. Findings
