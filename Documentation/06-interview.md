@@ -1,24 +1,24 @@
-# Personal Expense Tracker - Interview Framework
+# Personal Expense Tracker - Interview Guide (Detailed)
 
 ## 1. Interview Goals
-- Identify friction points in manual expense logging.
-- Understand user motivation for financial discipline.
-- Validate the need for visual charts and balance tracking.
+The main purpose is to understand how people currently manage their money and identify the features they actually need.
+- Identify the biggest hurdles in tracking daily costs.
+- Find out what kind of "shortcuts" make people use an app consistently.
+- Discover which visual charts are easiest for them to understand.
 
-## 2. Target Personas
-- **Persona 1:** University Student (Small frequent spends).
-- **Persona 2:** Young Professional (Monthly bills and salary).
-- **Persona 3:** Freelancer (Variable income and project costs).
+## 2. Target Audience
+- **Students:** To track allowance and daily transport/snacks.
+- **Job Holders:** To manage salary, rent, and monthly savings.
+- **Freelancers:** To track varying income sources and project spends.
 
-## 3. Structured Interview Questions
-| Question # | Interview Question | Objective | Mapped Requirement |
-|---|---|---|---|
-| Q1 | How do you currently track your daily spending? | Discover current behavior | FR-01, FR-05 |
-| Q2 | What prevents you from recording every small purchase (e.g., snacks)? | Identify pain points | FR-02, NFR-01 |
-| Q3 | How many seconds would you realistically spend to log one item? | Define performance needs | NFR-01 (Speed) |
-| Q4 | When opening a tracker, what is the first number you want to see? | Identify priority features | FR-10 (Balance) |
-| Q5 | Have you used other apps? What made you stop using them? | Competitive analysis | FR-02 (Simplicity) |
-| Q6 | What kind of chart would help you understand your habits better? | Design visualization | FR-08 (Charts) |
+## 3. Interview Questions
+| # | Question | Follow-up/Sub-questions |
+|---|---|---|
+| 1 | **How do you keep track of your money now?** | - Do you use a notebook, an app, or just memory?<br>- Are you happy with your current method? |
+| 2 | **What makes it hard to log every single small spend?** | - Is it the time it takes?<br>- Do you simply forget about small amounts like snacks or bus fares? |
+| 3 | **How much time are you willing to spend on an entry?** | - Would you prefer 2 clicks or typing details?<br>- Is "Auto-filling" categories important to you? |
+| 4 | **What is the most important number you want to track?** | - Is it your "Remaining Balance"?<br>- Or your "Total Spent this month"? |
+| 5 | **What do you dislike about other money apps?** | - Are they too confusing or flooded with ads?<br>- Is there a feature you wish was easier to find? |
+| 6 | **What kind of chart would help you understand your habits?** | - Do you like Pie Charts (for categories)?<br>- Or Bar Graphs (for monthly changes)? |
 
-## 4. Closing Note
-Thank the interviewee and ask if they would be willing to test the initial prototype once it is ready.
+
