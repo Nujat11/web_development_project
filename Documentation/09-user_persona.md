@@ -1,4 +1,4 @@
-# 09 - User Personas (Basic)
+# 09 - User Personas 
 
 ## Persona Comparison Table
 
