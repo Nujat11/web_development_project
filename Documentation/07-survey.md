@@ -3,7 +3,7 @@
 ## 1. Survey Overview
 | Attribute | Value |
 |---|---|
-| Sample Size | 50 respondents |
+| Sample Size | 10 respondents |
 | Segments | Students |
 | Duration | 2 days |
 | Method | Online Form |
