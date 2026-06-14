@@ -1,4 +1,4 @@
-# Personal Expense Tracker - Survey Report (Basic)
+# Personal Expense Tracker - Survey Report 
 
 ## 1. Survey Overview
 | Attribute | Value |

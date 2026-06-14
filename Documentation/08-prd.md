@@ -1,4 +1,4 @@
-# 08 - Product Requirement Document (PRD)
+# 08 - Product Requirement Document 
 
 ## 1. Project Background
 The **Personal Expense Tracker** is a basic web app designed to help students and individuals track their daily spending easily. It focuses on speed and simplicity to ensure users don't forget to log small costs.

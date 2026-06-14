@@ -1,4 +1,4 @@
-# Personal Expense Tracker - Stakeholder Analysis (Basic)
+# Personal Expense Tracker - Stakeholder Analysis 
 
 ## 1. Primary Stakeholders
 | Stakeholder | Role | Expectation |

@@ -1,4 +1,4 @@
-# Personal Expense Tracker - Feasibility Analysis (Basic)
+# Personal Expense Tracker - Feasibility Analysis 
 
 ## 1. Technical Feasibility
 *   **Tools:** We are using React and FastAPI. Both have lots of tutorials and are easy to learn for university projects.

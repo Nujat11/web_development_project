@@ -1,4 +1,4 @@
-# Personal Expense Tracker - Information Gathering Report (Basic)
+# Personal Expense Tracker - Information Gathering Report 
 
 ## 1. Introduction
 This report explains how I gathered information to decide what features this app needs. I wanted to keep it simple so that students and individuals can use it without any confusion.

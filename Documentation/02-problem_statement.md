@@ -1,4 +1,4 @@
-# Personal Expense Tracker - Problem Statement (Basic)
+# Personal Expense Tracker - Problem Statement 
 
 ## 1. Introduction
 Many individuals, especially university students and young professionals, struggle to manage their personal finances. Without a clear record of daily spending, it is easy to overspend and difficult to save for future needs.

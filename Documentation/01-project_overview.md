@@ -1,4 +1,4 @@
-# Personal Expense Tracker - Project Overview (Basic)
+# Personal Expense Tracker - Project Overview 
 
 ## 1. Introduction
 The Personal Expense Tracker is a simple web application designed to help people track their daily income and expenses. The goal is to provide an easy way for users to see where their money is going and manage their savings effectively.
