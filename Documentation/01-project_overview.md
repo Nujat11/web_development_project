@@ -16,7 +16,6 @@ Many people struggle to remember their daily small expenditures like snacks, tra
 *   **Frontend:** React (for a fast and responsive user interface).
 *   **Backend:** FastAPI (to handle calculations and data storage).
 *   **Database:** PostgreSQL (to store transaction history safely).
-*   **Security:** JWT (to keep user accounts and data private).
 
 ## 5. Project Features (Scope)
 | **Feature** | **Description** |
