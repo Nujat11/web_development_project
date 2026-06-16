@@ -4,7 +4,11 @@
 | Stakeholder | Role | Expectation |
 | :--- | :--- | :--- |
 | **End Users** | Use the app daily | A simple app that tracks money correctly. |
+<<<<<<< Updated upstream
 | **Student Developer** | Build the project | To create a functional React and FastAPI app. |
+=======
+| **Student Developer** |  | To create functional React and FastAPI app. |
+>>>>>>> Stashed changes
 
 ## 2. Secondary Stakeholders
 | Stakeholder | Role | Expectation |
