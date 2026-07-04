@@ -42,7 +42,7 @@ function ExpenseModal({ isOpen, onClose, onSave, expenseToEdit }) {
           </div>
           <div className="flex-row">
             <div className="form-group" style={{flex: 1}}>
-              <label>Amount (৳)</label>
+              <label>Amount ($)</label>
               <input type="number" step="0.01" className="input-glass" value={amount} onChange={(e) => setAmount(e.target.value)} required />
             </div>
             <div className="form-group" style={{flex: 1}}>

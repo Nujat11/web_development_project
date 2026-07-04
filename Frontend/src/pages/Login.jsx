@@ -29,7 +29,8 @@ function Login() {
   return (
     <div className="auth-container">
       <div className="glass-panel auth-box">
-        <h2 className="auth-title">Welcome Back</h2>
+        <h1 className="navbar-brand" style={{textAlign: "center", marginBottom: "10px", fontSize: "2.2rem"}}>Expense Tracker</h1>
+        <h2 className="auth-title" style={{marginTop: 0, fontSize: "1.5rem", color: "#ccc"}}>Welcome Back</h2>
         {error && <div className="error-msg">{error}</div>}
         <form onSubmit={handleSubmit}>
           <div className="form-group">

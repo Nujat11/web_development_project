@@ -81,15 +81,15 @@ function Dashboard() {
         <div className="cards-container">
           <div className="glass-panel stat-card">
             <div className="title">Total Balance</div>
-            <div className="amount">৳{balance.toFixed(2)}</div>
+            <div className="amount">${balance.toFixed(2)}</div>
           </div>
           <div className="glass-panel stat-card income-card">
             <div className="title">Total Income</div>
-            <div className="amount income">+৳{totalIncome.toFixed(2)}</div>
+            <div className="amount income">+${totalIncome.toFixed(2)}</div>
           </div>
           <div className="glass-panel stat-card expense-card">
             <div className="title">Total Expense</div>
-            <div className="amount expense">-৳{totalExpense.toFixed(2)}</div>
+            <div className="amount expense">-${totalExpense.toFixed(2)}</div>
           </div>
         </div>
 
@@ -112,7 +112,7 @@ function Dashboard() {
                     </div>
                     <div className="t-right">
                       <div className={`t-amt ${t.type === 'Income' ? 'income' : 'expense'}`}>
-                        {t.type === 'Income' ? '+' : '-'}৳{t.amount.toFixed(2)}
+                        {t.type === 'Income' ? '+' : '-'}${t.amount.toFixed(2)}
                       </div>
                       <div className="t-date">{t.date}</div>
                     </div>
