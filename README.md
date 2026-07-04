@@ -4,6 +4,13 @@ A modern, full-stack web application designed to help you strictly track your fi
 
 ---
 
+## 🔗 Live Links
+- **Frontend (Netlify):** [https://your-netlify-app-url.netlify.app](https://your-netlify-app-url.netlify.app)
+- **Backend API (Render):** [https://web-development-project-shzj.onrender.com](https://web-development-project-shzj.onrender.com)
+- **API Documentation:** [https://web-development-project-shzj.onrender.com/docs](https://web-development-project-shzj.onrender.com/docs)
+
+---
+
 ## 🎨 Features
 - **Secure User Authentication**: Complete Register & Login flow with strongly encrypted local password hashing (`bcrypt`). Route protected UI.
 - **Dynamic Glassmorphism UI**: Beautiful, layered gradients and blurred panes constructed natively with React & CSS. 
@@ -13,51 +20,35 @@ A modern, full-stack web application designed to help you strictly track your fi
 
 ## 🛠️ Technology Stack
 - **Frontend Layer:** React 18, Vite, Recharts, React Router
-- **Backend Infrastructure:** Python 3.12+, FastAPI, SQLAlchemy, Uvicorn, bcrypt
+- **Backend Infrastructure:** Python 3.10+, FastAPI, SQLAlchemy, Gunicorn
+- **Deployment:** Render (Backend), Netlify (Frontend)
 - **Design Pattern:** Strict Backend MVC implementation
 
 ---
 
-## 🚀 Getting Started (How to Run)
+## 🚀 Deployment Config
+The project is configured for automated deployment:
+- **Backend:** Uses a `render.yaml` blueprint for one-click deployment on Render.
+- **Frontend:** Connected to GitHub for automated builds on Netlify.
+- **CORS:** Configured to allow secure cross-origin requests between the Render API and Netlify UI.
 
-To run this project locally, you will need to open **two terminal windows**.
+---
+
+## 🚀 Getting Started (Local Development)
 
 ### Step 1: Start the Backend (API Server)
-The backend acts as the brain handling routing and our SQLite Database. Open a terminal and run:
-
 ```bash
-# 1. Navigate into the Backend folder
 cd Backend
-
-# 2. Install Python dependencies 
 pip install -r requirements.txt
-
-# 3. Start the FastAPI server locally on port 8000
 uvicorn main:app --reload --port 8000
 ```
-*Your backend is now actively running! You can view the live API Documentation (Swagger UI) at `http://localhost:8000/docs`.*
 
 ### Step 2: Start the Frontend (User Interface)
-The frontend powers what you see in the browser. Open a **second separate terminal** and run:
-
 ```bash
-# 1. Navigate into the Frontend folder
 cd Frontend
-
-# 2. Install all NodeJS packages dependencies
 npm install
-
-# 3. Spin up the development server
 npm run dev
 ```
-
-### Step 3: Use the app!
-Go into your web browser and navigate directly to:
-👉 **[http://localhost:5173/](http://localhost:5173/)**
-
-1. Hit "Sign Up" to create a fresh secure account.
-2. Sign in!
-3. Add some financial transactions in the dashboard! Everything is dynamically recorded!
 
 ---
 
@@ -65,7 +56,7 @@ Go into your web browser and navigate directly to:
 
 ```
 ├── Backend/                 # Python FastAPI Application
-│   ├── controllers/         # Business Logic (Hashing, DB manipulations)
+│   ├── controllers/         # Business Logic
 │   ├── models/              # SQLAlchemy Database Schemes
 │   ├── routes/              # Client-Facing Endpoint URLs
 │   ├── schemas/             # Pydantic Typing Validation 
@@ -74,12 +65,15 @@ Go into your web browser and navigate directly to:
 │
 ├── Frontend/                # Vite + React Interface
 │   ├── src/                 
-│   │   ├── components/      # Modular UI Parts (Modals, Charts, Navbar)
-│   │   ├── pages/           # High Level Routes (Dashboard, Login, Register)
-│   │   ├── App.jsx          # Route Mapping Config
+│   │   ├── components/      # Modular UI Parts
+│   │   ├── pages/           # High Level Routes
 │   │   ├── api.js           # Central Axios Backend Binding
 │   │   └── index.css        # Premium Glassmorphism Design
-│   └── package.json         # Node configs
 │
+├── render.yaml              # Render Deployment Blueprint
+├── netlify.toml             # Netlify Deployment Config
 └── Documentation/           # TDD, Requirements, ERD
 ```
+
+---
+Developed by **Nujat11** 💻
