@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --bg-gradient: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-  --glass-bg: rgba(255, 255, 255, 0.05);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --bg-gradient: linear-gradient(135deg, #020024, #090979, #00d4ff);
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
   --text-primary: #ffffff;
-  --text-secondary: #b3b3b3;
-  --accent-color: #6c5ce7;
-  --income-color: #00cec9;
-  --expense-color: #ff7675;
+  --text-secondary: #cacedb;
+  --accent-color: #00d4ff;
+  --income-color: #2ecc71;
+  --expense-color: #e74c3c;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
