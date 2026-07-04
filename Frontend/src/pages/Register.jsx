@@ -29,8 +29,9 @@ function Register() {
   return (
     <div className="auth-container">
       <div className="glass-panel auth-box">
-        <h1 className="navbar-brand" style={{textAlign: "center", marginBottom: "10px", fontSize: "2.2rem"}}>Expense Tracker</h1>
-        <h2 className="auth-title" style={{marginTop: 0, fontSize: "1.5rem", color: "#ccc"}}>Create Account</h2>
+        <h1 className="navbar-brand" style={{textAlign: "center", marginBottom: "15px", fontSize: "2.8rem", display: "block"}}>Expense Tracker</h1>
+        <h2 className="auth-title" style={{marginTop: 0, fontSize: "1.4rem", color: "#ccc", textAlign: "center", fontWeight: "300"}}>Join us to start tracking</h2>
+        
         {error && <div className="error-msg">{error}</div>}
         <form onSubmit={handleSubmit}>
           <div className="form-group">
@@ -63,9 +64,12 @@ function Register() {
               required
             />
           </div>
-          <button type="submit" className="btn-primary">Sign Up</button>
+          <button type="submit" className="btn-primary" style={{background: 'linear-gradient(45deg, #00d4ff, #090979)'}}>Create Account</button>
         </form>
-        <Link to="/login" className="auth-link">Already have an account? Login</Link>
+        <div style={{textAlign: "center", marginTop: "20px"}}>
+          <span style={{color: "#aaa", fontSize: "0.9rem"}}>Already have an account? </span>
+          <Link to="/login" className="auth-link" style={{display: "inline", color: "#00d4ff", fontWeight: "600"}}>Login</Link>
+        </div>
       </div>
     </div>
   );

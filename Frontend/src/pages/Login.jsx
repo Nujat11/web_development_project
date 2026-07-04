@@ -73,7 +73,10 @@ function Login() {
           </div>
           <button type="submit" className="btn-primary" style={{background: 'linear-gradient(45deg, #00d4ff, #090979)'}}>Sign In</button>
         </form>
-        <Link to="/register" className="auth-link">Don't have an account? Register</Link>
+        <div style={{textAlign: "center", marginTop: "20px"}}>
+          <span style={{color: "#aaa", fontSize: "0.9rem"}}>New user? </span>
+          <Link to="/register" className="auth-link" style={{display: "inline", color: "#00d4ff", fontWeight: "600"}}>Create an Account</Link>
+        </div>
       </div>
     </div>
   );
