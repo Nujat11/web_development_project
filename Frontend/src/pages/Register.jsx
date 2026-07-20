@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import api from '../api';
+import { dataService } from '../dataService';
 
 function Register() {
   const [name, setName] = useState('');
@@ -24,9 +24,11 @@ function Register() {
     }
     setLoading(true);
     try {
-      await api.post('/register', { name, email, password });
+      await dataService.register(name, email, password);
+      // Clean redirect to login as original
       navigate('/login');
     } catch (err) {
+<<<<<<< Updated upstream
       const detail = err.response?.data?.detail;
       const status = err.response?.status;
       if (status === 409 || detail?.toLowerCase().includes('exist')) {
@@ -38,6 +40,9 @@ function Register() {
       }
     } finally {
       setLoading(false);
+=======
+      setError(err.message || err.response?.data?.detail || 'Registration failed');
+>>>>>>> Stashed changes
     }
   };
 
