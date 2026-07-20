@@ -1,9 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from database import engine, Base
 from routes import user_routes, expense_routes
-
-Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
     title="Personal Expense Tracker API",
