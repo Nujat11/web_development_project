@@ -28,8 +28,7 @@ function Register() {
       // Clean redirect to login as original
       navigate('/login');
     } catch (err) {
-<<<<<<< Updated upstream
-      const detail = err.response?.data?.detail;
+      const detail = err.response?.data?.detail || err.message;
       const status = err.response?.status;
       if (status === 409 || detail?.toLowerCase().includes('exist')) {
         setError('An account with this email already exists.');
@@ -40,9 +39,6 @@ function Register() {
       }
     } finally {
       setLoading(false);
-=======
-      setError(err.message || err.response?.data?.detail || 'Registration failed');
->>>>>>> Stashed changes
     }
   };
 
