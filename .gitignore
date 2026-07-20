@@ -1,0 +1,15 @@
+# Python compiled files
+**/__pycache__/
+*.pyc
+
+# Database files
+Backend/expense_tracker.db
+*.db
+*.sqlite
+
+# Environment/local environment files
+.env
+.env.local
+.venv/
+env/
+venv/
