@@ -81,10 +81,6 @@ function Dashboard() {
     }
   };
 
-<<<<<<< Updated upstream
-  const openAddModal = () => { setExpenseToEdit(null); setIsModalOpen(true); };
-  const openEditModal = (t) => { setExpenseToEdit(t); setIsModalOpen(true); };
-=======
   const saveBudget = () => {
     const parsedLimit = parseFloat(budgetInput);
     if (!isNaN(parsedLimit) && parsedLimit >= 0) {
@@ -110,7 +106,6 @@ function Dashboard() {
     setExpenseToEdit(t);
     setIsModalOpen(true);
   };
->>>>>>> Stashed changes
 
   // Calculations
   const totalIncome = transactions.filter(t => t.type === 'Income').reduce((acc, curr) => acc + curr.amount, 0);
@@ -152,48 +147,36 @@ function Dashboard() {
     <>
       <Navbar />
       <div className="dashboard-container">
-<<<<<<< Updated upstream
-        <div className="dashboard-header">
-          <div>
-            <div className="welcome-msg">Hello, <span>{user.name}</span>! 👋</div>
-            <div className="welcome-sub">{today}</div>
-          </div>
-          <button className="btn-primary btn-small" onClick={openAddModal} style={{ width: 'auto', padding: '10px 20px' }}>
-            + Add Transaction
-          </button>
-        </div>
-
-        {/* Stat Cards */}
-=======
         
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '15px', marginBottom: '30px' }}>
-          <h1 className="welcome-msg" style={{ marginBottom: 0 }}>Hello, <span>{user.name}</span>!</h1>
-          {storageMode === 'local' && (
-            <button 
-              className="btn-edit" 
-              style={{ padding: '8px 16px', background: 'rgba(0, 212, 255, 0.1)', color: '#00d4ff', border: '1px solid rgba(0, 212, 255, 0.2)' }}
-              onClick={handleSeedData}
-            >
-              ⚡ Load Sample Data
+          <div>
+            <div className="welcome-msg" style={{ marginBottom: 0 }}>Hello, <span>{user.name}</span>! 👋</div>
+            <div className="welcome-sub">{today}</div>
+          </div>
+          <div style={{ display: 'flex', gap: '10px' }}>
+            {storageMode === 'local' && (
+              <button 
+                className="btn-edit" 
+                style={{ padding: '8px 16px', background: 'rgba(0, 212, 255, 0.1)', color: '#00d4ff', border: '1px solid rgba(0, 212, 255, 0.2)' }}
+                onClick={handleSeedData}
+              >
+                ⚡ Load Sample Data
+              </button>
+            )}
+            <button className="btn-primary btn-small" onClick={openAddModal} style={{ width: 'auto', padding: '10px 20px' }}>
+              + Add Transaction
             </button>
-          )}
+          </div>
         </div>
         
->>>>>>> Stashed changes
         <div className="cards-container">
           <div className="glass-panel stat-card">
             <div className="card-icon">💰</div>
             <div className="title">Total Balance</div>
-<<<<<<< Updated upstream
             <div className="amount" style={{ color: balance >= 0 ? 'var(--income-color)' : 'var(--expense-color)' }}>
               {fmt(balance)}
             </div>
             <div className="card-trend">{transactions.length} total transactions</div>
-=======
-            <div className="amount" style={{ color: balance >= 0 ? '#fff' : 'var(--expense-color)' }}>
-              {balance >= 0 ? '' : '-'}${Math.abs(balance).toFixed(2)}
-            </div>
->>>>>>> Stashed changes
           </div>
           <div className="glass-panel stat-card income-card">
             <div className="card-icon">📈</div>
@@ -209,9 +192,6 @@ function Dashboard() {
           </div>
         </div>
 
-<<<<<<< Updated upstream
-        {/* Content */}
-=======
         {/* Budget limit progress bar */}
         <div className="glass-panel" style={{ marginBottom: '40px', padding: '20px 24px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
@@ -265,7 +245,6 @@ function Dashboard() {
           </div>
         </div>
 
->>>>>>> Stashed changes
         <div className="content-section">
           {/* Transactions */}
           <div className="glass-panel transactions-list">
@@ -273,16 +252,6 @@ function Dashboard() {
               <h2 className="section-title">Transactions</h2>
               <button className="btn-primary btn-small" onClick={openAddModal}>+ Add New</button>
             </div>
-<<<<<<< Updated upstream
-            <div className="transaction-list-wrap">
-              {transactions.length === 0 ? (
-                <div className="empty-state">
-                  <div className="empty-state-icon">📭</div>
-                  <p>No transactions yet.<br />Add your first one to get started!</p>
-                </div>
-              ) : (
-                [...transactions].reverse().map((t) => (
-=======
 
             {/* Filter and Sorting Controls Pane */}
             <div style={{ 
@@ -357,12 +326,12 @@ function Dashboard() {
             
             <div className="transaction-list-wrap">
               {filteredTransactions.length === 0 ? (
-                <div style={{ color: '#888', textAlign: 'center', marginTop: '40px' }}>
-                  No matching transactions found. Add a transaction or seed mock data to get started!
+                <div className="empty-state">
+                  <div className="empty-state-icon">📭</div>
+                  <p>No matching transactions found.<br />Add a transaction or seed mock data to get started!</p>
                 </div>
               ) : (
                 filteredTransactions.map((t) => (
->>>>>>> Stashed changes
                   <div className="transaction-item" key={t.id}>
                     <div className={`t-icon ${t.type === 'Income' ? 'income-icon' : 'expense-icon'}`}>
                       {CATEGORY_ICONS[t.category] || '📦'}
@@ -392,8 +361,7 @@ function Dashboard() {
             <div className="section-header">
               <h2 className="section-title">Expense Summary</h2>
             </div>
-<<<<<<< Updated upstream
-            {transactions.length === 0 ? (
+            {filteredTransactions.length === 0 ? (
               <div className="chart-placeholder">
                 <div style={{ textAlign: 'center' }}>
                   <div style={{ fontSize: '2.5rem', marginBottom: '12px', opacity: 0.4 }}>📊</div>
@@ -401,11 +369,8 @@ function Dashboard() {
                 </div>
               </div>
             ) : (
-              <ExpenseChart data={transactions} />
+              <ExpenseChart data={filteredTransactions} />
             )}
-=======
-            <ExpenseChart data={filteredTransactions} />
->>>>>>> Stashed changes
           </div>
         </div>
       </div>
