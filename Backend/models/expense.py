@@ -1,13 +1,9 @@
-from sqlalchemy import Column, Integer, String, Float, Date, ForeignKey
-from database import Base
-
-class Expense(Base):
-    __tablename__ = "expenses"
-    
-    id = Column(Integer, primary_key=True, index=True)
-    user_id = Column(Integer, ForeignKey("users.id"), index=True)
-    title = Column(String, index=True)
-    amount = Column(Float)
-    category = Column(String, index=True)
-    type = Column(String) # 'Income' or 'Expense'
-    date = Column(Date)
+class Expense:
+    def __init__(self, id: int, user_id: int, title: str, amount: float, category: str, type: str, date):
+        self.id = id
+        self.user_id = user_id
+        self.title = title
+        self.amount = amount
+        self.category = category
+        self.type = type
+        self.date = date
