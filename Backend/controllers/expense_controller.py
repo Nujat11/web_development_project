@@ -19,7 +19,6 @@ def create_expense(db, expense: ExpenseCreate):
     database.expenses.append(db_expense)
     return db_expense
 
-def update_expense(db: Session, expense_id: int, expense: ExpenseUpdate):
 def update_expense(db, expense_id: int, expense: ExpenseUpdate):
     for e in database.expenses:
         if e.id == expense_id:
