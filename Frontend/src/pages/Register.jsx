@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { dataService } from '../dataService';
+import { dataService, getStorageMode, setStorageMode, getApiBaseUrl, setApiBaseUrl } from '../dataService';
 
 function Register() {
   const [name, setName] = useState('');
@@ -8,12 +8,27 @@ function Register() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [mode, setMode] = useState(getStorageMode());
+  const [apiUrl, setApiUrl] = useState(getApiBaseUrl());
+  const [showSettings, setShowSettings] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
     const user = localStorage.getItem('user');
     if (user) navigate('/dashboard');
   }, [navigate]);
+
+  const handleModeChange = (newMode) => {
+    setMode(newMode);
+    setStorageMode(newMode);
+    setError('');
+  };
+
+  const handleApiUrlChange = (e) => {
+    const val = e.target.value;
+    setApiUrl(val);
+    setApiBaseUrl(val);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -32,7 +47,7 @@ function Register() {
       const status = err.response?.status;
       if (status === 409 || detail?.toLowerCase().includes('exist')) {
         setError('An account with this email already exists.');
-      } else if (!err.response) {
+      } else if (!err.response && mode !== 'local') {
         setError('Unable to connect to server. If using Render free backend, it takes ~50s to wake up from sleep on first request. Please wait 15-30s and try clicking Register again!');
       } else {
         setError(detail || 'Registration failed. Please try again.');
@@ -81,8 +96,95 @@ function Register() {
         <div className="auth-box">
           <div className="auth-box-header">
             <h1>Create account</h1>
-            <p>Free forever — no credit card required</p>
+            <p>Free forever {mode === 'local' ? '(Local Mode)' : '(API Mode)'}</p>
           </div>
+
+          {/* Storage Mode Toggle Pill */}
+          <div style={{
+            display: 'flex', 
+            background: 'rgba(0, 0, 0, 0.3)', 
+            padding: '4px', 
+            borderRadius: '25px', 
+            marginBottom: '20px',
+            border: '1px solid rgba(255, 255, 255, 0.05)'
+          }}>
+            <button 
+              type="button" 
+              onClick={() => handleModeChange('local')}
+              style={{
+                flex: 1,
+                padding: '8px 12px',
+                borderRadius: '20px',
+                border: 'none',
+                background: mode === 'local' ? 'linear-gradient(45deg, #00d4ff, #090979)' : 'transparent',
+                color: '#fff',
+                fontSize: '0.85rem',
+                fontWeight: '600',
+                cursor: 'pointer',
+                transition: 'all 0.3s'
+              }}
+            >
+              🔒 Local Storage
+            </button>
+            <button 
+              type="button" 
+              onClick={() => handleModeChange('api')}
+              style={{
+                flex: 1,
+                padding: '8px 12px',
+                borderRadius: '20px',
+                border: 'none',
+                background: mode === 'api' ? 'linear-gradient(45deg, #00d4ff, #090979)' : 'transparent',
+                color: '#fff',
+                fontSize: '0.85rem',
+                fontWeight: '600',
+                cursor: 'pointer',
+                transition: 'all 0.3s'
+              }}
+            >
+              🌐 API Server
+            </button>
+          </div>
+
+          {/* API Settings dropdown if API mode is selected */}
+          {mode === 'api' && (
+            <div style={{marginBottom: '15px', padding: '10px', borderRadius: '10px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)'}}>
+              <button 
+                type="button"
+                onClick={() => setShowSettings(!showSettings)}
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  color: '#00d4ff',
+                  fontSize: '0.8rem',
+                  cursor: 'pointer',
+                  padding: 0,
+                  textAlign: 'left',
+                  display: 'block',
+                  width: '100%'
+                }}
+              >
+                🛠️ {showSettings ? 'Hide API URL Settings' : 'Configure API Base URL'}
+              </button>
+              {showSettings && (
+                <div style={{marginTop: '10px'}}>
+                  <label style={{fontSize: '0.75rem', color: '#aaa', display: 'block', marginBottom: '4px'}}>API Base URL</label>
+                  <input 
+                    type="text" 
+                    className="input-glass" 
+                    style={{
+                      marginBottom: 0, 
+                      padding: '8px 12px', 
+                      fontSize: '0.85rem',
+                      background: 'rgba(0,0,0,0.5)'
+                    }} 
+                    value={apiUrl} 
+                    onChange={handleApiUrlChange} 
+                  />
+                </div>
+              )}
+            </div>
+          )}
 
           {error && (
             <div className="error-msg" role="alert">

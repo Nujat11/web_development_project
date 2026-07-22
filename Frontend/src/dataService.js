@@ -10,7 +10,13 @@ export const setStorageMode = (mode) => {
 };
 
 export const getApiBaseUrl = () => {
-  return localStorage.getItem('api_base_url') || DEFAULT_API_URL;
+  const saved = localStorage.getItem('api_base_url');
+  const isLocalHostEnv = typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
+  if (saved && saved.includes('localhost') && !isLocalHostEnv) {
+    localStorage.removeItem('api_base_url');
+    return DEFAULT_API_URL;
+  }
+  return saved || DEFAULT_API_URL;
 };
 
 export const setApiBaseUrl = (url) => {
