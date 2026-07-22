@@ -1,35 +1,34 @@
-import database
-from models.expense import Expense
+from store import store
 from schemas.expense import ExpenseCreate, ExpenseUpdate
 
-def get_expenses_by_user(db, user_id: int):
-    return [e for e in database.expenses if e.user_id == user_id]
+def get_expenses_by_user(user_id: int):
+    return [e for e in store.expenses if e.get("user_id") == user_id]
 
-def create_expense(db, expense: ExpenseCreate):
-    e_id = database.next_expense_id()
-    db_expense = Expense(
-        id=e_id,
-        user_id=expense.user_id,
-        title=expense.title,
-        amount=expense.amount,
-        category=expense.category,
-        type=expense.type,
-        date=expense.date
-    )
-    database.expenses.append(db_expense)
-    return db_expense
+def create_expense(expense: ExpenseCreate):
+    exp_dict = {
+        "id": store.expense_id_counter,
+        **expense.model_dump()
+    }
+    store.expense_id_counter += 1
+    store.expenses.append(exp_dict)
+    store.save_data()
+    return exp_dict
 
-def update_expense(db, expense_id: int, expense: ExpenseUpdate):
-    for e in database.expenses:
-        if e.id == expense_id:
+def update_expense(expense_id: int, expense: ExpenseUpdate):
+    for idx, e in enumerate(store.expenses):
+        if e.get("id") == expense_id:
             update_data = expense.model_dump(exclude_unset=True)
-            for key, value in update_data.items():
-                setattr(e, key, value)
+            for key, val in update_data.items():
+                if val is not None:
+                    e[key] = val
+            store.save_data()
             return e
     return None
 
-def delete_expense(db, expense_id: int):
-    for i, e in enumerate(database.expenses):
-        if e.id == expense_id:
-            return database.expenses.pop(i)
-    return None
+def delete_expense(expense_id: int):
+    for idx, e in enumerate(store.expenses):
+        if e.get("id") == expense_id:
+            store.expenses.pop(idx)
+            store.save_data()
+            return True
+    return False
