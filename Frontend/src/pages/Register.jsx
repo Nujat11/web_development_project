@@ -33,7 +33,7 @@ function Register() {
       if (status === 409 || detail?.toLowerCase().includes('exist')) {
         setError('An account with this email already exists.');
       } else if (!err.response) {
-        setError('Unable to connect to the server. Please try again.');
+        setError('Unable to connect to server. If using Render free backend, it takes ~50s to wake up from sleep on first request. Please wait 15-30s and try clicking Register again!');
       } else {
         setError(detail || 'Registration failed. Please try again.');
       }

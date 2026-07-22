@@ -1,4 +1,4 @@
-import api from './api';
+import api, { DEFAULT_API_URL } from './api';
 
 // Helper to get raw storage mode from localStorage. Default to 'local' for standalone database-less mode.
 export const getStorageMode = () => {
@@ -10,7 +10,7 @@ export const setStorageMode = (mode) => {
 };
 
 export const getApiBaseUrl = () => {
-  return localStorage.getItem('api_base_url') || 'http://localhost:8000';
+  return localStorage.getItem('api_base_url') || DEFAULT_API_URL;
 };
 
 export const setApiBaseUrl = (url) => {

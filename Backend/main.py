@@ -1,6 +1,14 @@
+import sys
+import os
+
+backend_dir = os.path.dirname(os.path.abspath(__file__))
+if backend_dir not in sys.path:
+    sys.path.insert(0, backend_dir)
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from routes import user_routes, expense_routes
+
 
 app = FastAPI(
     title="Personal Expense Tracker API",

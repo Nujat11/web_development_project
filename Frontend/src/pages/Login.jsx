@@ -57,7 +57,7 @@ function Login() {
       } else if (status === 404) {
         setError('No account found with this email address.');
       } else if (!err.response && mode !== 'local') {
-        setError('Unable to connect to the server. Please try again.');
+        setError('Unable to connect to server. If using Render free backend, it takes ~50s to wake up from sleep on first request. Please wait a moment and try again!');
       } else {
         setError(detail || 'Login failed. Please try again.');
       }
